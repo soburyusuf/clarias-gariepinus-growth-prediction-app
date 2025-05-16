@@ -105,7 +105,7 @@ This project is for educational and research purposes. Please cite the original 
 
 ## Screenshots
 
-![App Screenshot Contact![image](https://github.com/user-attachments/assets/26e4151d-d498-4acd-8661-917e91b2979b)
+![image](https://github.com/user-attachments/assets/26e4151d-d498-4acd-8661-917e91b2979b)
 
 
 For questions or collaboration, please open an issue or contact [princeolayiwola8@gmail.com].
