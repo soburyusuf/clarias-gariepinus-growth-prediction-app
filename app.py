@@ -6,7 +6,6 @@ st.title("Clarias Fish Final Mean Weight Prediction")
 
 st.markdown("""
 This app predicts the **Final Mean Weight (g)** of Clarias fish based on feed composition and growth parameters.
-The model pipeline includes numeric imputation, scaling, and one-hot encoding for categorical features.
 """)
 
 @st.cache_resource
