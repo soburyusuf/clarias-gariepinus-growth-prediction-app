@@ -105,7 +105,8 @@ This project is for educational and research purposes. Please cite the original 
 
 ## Screenshots
 
-![image](https://github.com/user-attachments/assets/26e4151d-d498-4acd-8661-917e91b2979b)
+!
+![Screenshot 2025-05-16 200120](https://github.com/user-attachments/assets/90da6dd5-6e1d-44b1-9ca3-c1402e8f081a)
 
 
 For questions or collaboration, please open an issue or contact [princeolayiwola8@gmail.com].
