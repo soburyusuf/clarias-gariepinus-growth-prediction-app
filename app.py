@@ -19,15 +19,15 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.subheader("Growth Parameters")
-    initial_mean_weight = st.slider(
+    initial_mean_weight = st.number_input(
         "Initial Weight (g)", 0.0, 10.0, 2.2, 0.1,
         help="Starting weight of the fish population"
     )
-    mean_weight_gained = st.slider(
+    mean_weight_gained = st.number_input(
         "Weight Gained (g)", 0.0, 20.0, 4.0, 0.1,
         help="Current weight gain observed"
     )
-    specific_growth_rate = st.slider(
+    specific_growth_rate = st.number_input(
         "Growth Rate (SGR)", 0.0, 20.0, 5.0, 0.1,
         help="Specific growth rate percentage"
     )
@@ -61,7 +61,7 @@ with health_col2:
 
 # Protein Source Selection
 st.subheader("Protein Sources")
-protein_type = st.selectbox(
+protein_type = st.radio(
     "Protein Type", 
     ["Citrus sinesis Peel", "Citrus sinesis Pulp", "Dioscorea rotundata Peel", "Non"],
     index=0,
