@@ -35,8 +35,8 @@ with col1:
 with col2:
     st.subheader("Feed Composition")
     # Linked feed percentage sliders
-    commercial_feed = spt_percentage = st.number_input("SPT Percentage", min_value=0.0, max_value=100.0, value=0.1, step=0.01)
-    commercial_feed_percentage = st.number_input("Commercial Feed Percentage", min_value=0.0, max_value=100.0, value=0.9, step=0.01)
+    commercial_feed = spt_percentage = st.number_input("SPT Percentage (%)", 0.0, 100.0, 40.0, 0.1)
+    commercial_feed_percentage = st.number_input("Commercial Feed Percentage (%)", 0.0, 100.0, 40.0, 0.1)
 
     
 
