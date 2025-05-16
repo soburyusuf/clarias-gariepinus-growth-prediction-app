@@ -24,7 +24,7 @@ percentage_survival = st.number_input("Percentage Survival (%PS)", min_value=0.0
 single_cell_protein = st.selectbox("Single Cell Protein", ["Yes", "No"])
 single_cell_protein_type = st.selectbox(
     "Single Cell Protein Type (SPT)",
-    ["Citrus sinesis Peel", "Citrus sinesis Pulp"]
+    ["Citrus sinesis Peel", "Citrus sinesis Pulp","Dioscorea rotundata Peel", "Non"]
 )
 spt_percentage = st.number_input("SPT Percentage", min_value=0.0, max_value=1.0, value=0.1, step=0.01)
 commercial_feed_percentage = st.number_input("Commercial Feed Percentage", min_value=0.0, max_value=1.0, value=0.9, step=0.01)
