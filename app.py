@@ -4,7 +4,7 @@ import joblib
 
 st.title("🐟 Clarias Fish Growth Predictor")
 st.markdown("""
-**Predict the final weight of your Clarias fish** based on feed composition and growth parameters.
+**Predict the final mean weight of your Clarias fish** based on feed composition and growth parameters.
 """)
 
 # Load model with cache
@@ -35,16 +35,12 @@ with col1:
 with col2:
     st.subheader("Feed Composition")
     # Linked feed percentage sliders
-    commercial_feed = st.slider(
-        "Commercial Feed (%)", 0.0, 1.0, 0.9, 0.01,
-        format="%.2f",
-        help="Percentage of commercial feed in diet"
+    commercial_feed = spt_percentage = st.number_input("SPT Percentage", min_value=0.0, max_value=1.0, value=0.1, step=0.01)
+commercial_feed_percentage = st.number_input("Commercial Feed Percentage", min_value=0.0, max_value=1.0, value=0.9, step=0.01)
     )
-    spt_percentage = 1.0 - commercial_feed
-    st.metric("SPT Percentage", f"{spt_percentage:.0%}", 
-             help="Automatically calculated as 100% - Commercial Feed %")
+    
 
-    feed_conversion = st.slider(
+    feed_conversion = st.number_input(
         "Feed Conversion Rate", 0.0, 5.0, 0.4, 0.1,
         help="FCR: Feed required per unit weight gain"
     )
@@ -53,12 +49,12 @@ with col2:
 st.subheader("Health Metrics")
 health_col1, health_col2 = st.columns(2)
 with health_col1:
-    mortality = st.slider(
+    mortality = st.number_input(
         "Mortality Rate (%)", 0.0, 100.0, 60.0, 0.1,
         help="Percentage of population lost"
     )
 with health_col2:
-    survival = st.slider(
+    survival = st.number_input(
         "Survival Rate (%)", 0.0, 100.0, 40.0, 0.1,
         help="Percentage of population surviving"
     )
@@ -102,12 +98,11 @@ if st.button("🎣 Calculate Final Weight", type="primary"):
 with st.sidebar:
     st.markdown("## 🧪 Model Info")
     st.markdown("""
-    - **Trained on:** Historical growth data
+    - **Trained on:** Unilorin zoology department Historical growth data
     - **Features:** 10 growth parameters
     - **Algorithm:** Linear Regression
     """)
-    st.markdown("## ⚠️ Requirements")
-    st.markdown("Ensure `model.joblib` is in the same directory")
+   
 
 # Tooltip and validation
 st.caption("💡 Tip: Adjust sliders to simulate different feeding scenarios")
